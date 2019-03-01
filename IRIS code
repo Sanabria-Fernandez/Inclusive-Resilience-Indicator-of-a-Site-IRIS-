@@ -3,5 +3,33 @@ Title: Quantifying patterns of resilience: what matters is the intensity, not th
 Authors: Jose A. Sanabria-Fernandez, Natali Lazzari, Mikel A. Becerro
 Journal: Ecological Indicators
 
+# Download excel file of this project (Database.csv)
 
 
+
+# Building normalization function
+
+numeric.iris<-as.data.frame(database)
+Normalization<-function(x) {(x - min(x)) / (max(x)-(min(x)))}
+variables.normalize<-apply(database, 2, Normalization)
+summary(variables.normalize) # To check our values Min=0 and Max=1
+
+# Step where we are working on inverse variables
+
+pre.variables.inverse<-variables.normalize[c(1:10),(9:17)]
+View(pre.variables.inverse)
+inver.function<-function(x) {(1-x)}
+variables.inverse<-apply(pre.variables.inverse,2,inver.function)
+
+# Step where we link the full resilience matrix
+
+variables.final<-variables.normalize[,-c(9:17)] # variables without inverse function
+summary(variables.final) # Cheking variables.final
+summary(variables.inverse) # Cheking variables.inverse
+resilience.matrix<-cbind(variables.final,variables.inverse)
+summary(resilience.matrix) # Cheking full matrix
+
+# Final computation on the resilience matrix
+
+pre.iris<-(rowSums(resilience.matrix))
+iris.final<-(pre.iris/(ncol(resilience.matrix)))
