@@ -3,7 +3,11 @@ Title: Quantifying patterns of resilience: what matters is the intensity, not th
 Authors: Jose A. Sanabria-Fernandez, Natali Lazzari, Mikel A. Becerro
 Journal: Ecological Indicators
 
-# Download excel file (IRIS.data.csv)
+-------------------------------------------------------------------------------------------------------------------------
+
+In the next example we compute the IRIS indicator using artificial database.
+
+> Download excel file (IRIS.data.csv)
 
 IRIS.data.csv
 
