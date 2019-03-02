@@ -3,11 +3,11 @@ Title: Quantifying patterns of resilience: what matters is the intensity, not th
 Authors: Jose A. Sanabria-Fernandez, Natali Lazzari, Mikel A. Becerro
 Journal: Ecological Indicators
 
-# Download excel file of this project (IRIS.data.csv)
+# Download excel file (IRIS.data.csv)
 
 IRIS.data.csv
 
-> Data prepare
+> Data preparation
 
 database<-IRIS.data[,c(-1)]
 id<-IRIS.data$id
