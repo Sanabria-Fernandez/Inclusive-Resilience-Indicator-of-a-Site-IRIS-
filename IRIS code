@@ -6,15 +6,15 @@ Journal: Ecological Indicators
 
 -------------------------------------------------------------------------------------------------------------------------
 
-In the next example we compute the IRIS indicator using artificial database.
+In the next example we compute the IRIS indicator using a subset of the IRIS database.
 
-> Download excel file (IRIS.data.csv)
+> Download excel file (subset.IRIS.data.csv)
 
-IRIS.data.csv
+subset.IRIS.data.csv
 
 > Data preparation
 
-database<-IRIS.data[,c(-1)]
+database<-subset.IRIS.data[,c(-1)]
 id<-IRIS.data$id
 
 > Building normalization function
