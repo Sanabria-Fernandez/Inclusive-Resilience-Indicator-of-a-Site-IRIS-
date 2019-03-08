@@ -35,7 +35,7 @@ variables.inverse<-apply(pre.variables.inverse,2,inver.function)
 
 variables.final<-variables.normalize[,-c(9:17)] # variables without inverse function
 resilience.matrix<-cbind(variables.final,variables.inverse)
-summary(resilience.matrix) # Cheking full matrix
+summary(resilience.matrix) # Checking full matrix
 
 > Final computation on the resilience matrix
 
